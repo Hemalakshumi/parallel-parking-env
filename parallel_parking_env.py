@@ -30,7 +30,7 @@ class ParallelParkingEnv(AbstractEnv):
             "goal_tolerance": 0.4,
             "near_goal_position_reward": 2.0,
             "near_goal_reward": 3.0,
-            "additional_alignment_reward":2.0
+            "additional_alignment_reward":20.0
         })
         return config
 
