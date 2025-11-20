@@ -50,7 +50,7 @@ The environment uses the following reward components (defaults shown):
 - `additional_alignment_reward = 2.0` — extra reward when well aligned
 - Distance shaping — smooth negative shaping based on distance to goal
 
-For exact reward calculations, see the `_reward()` implementation in `custom_env.py`.
+For exact reward calculations, see the `_reward()` implementation in `parallel_parking_env.py`.
 
 ## Termination & truncation
 
