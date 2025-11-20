@@ -34,8 +34,6 @@ The agent (ego car) must learn to:
   - `cos_h, sin_h` — ego orientation
   - goal features — normalized
 
-- Normalization scales: `[50, 10, 10, 10, 1, 1]`.
-
 ### Action
 
 - Action type: `ContinuousAction` (typically `[steering, acceleration]`).
@@ -52,8 +50,6 @@ The environment uses the following reward components (defaults shown):
 - `additional_alignment_reward = 2.0` — extra reward when well aligned
 - Distance shaping — smooth negative shaping based on distance to goal
 
-This structure provides smoother gradients for policy optimization algorithms such as SAC or PPO.
-
 For exact reward calculations, see the `_reward()` implementation in `custom_env.py`.
 
 ## Termination & truncation
@@ -66,7 +62,7 @@ For exact reward calculations, see the `_reward()` implementation in `custom_env
 ### Episode truncation
 
 - Step count exceeds the duration (default `duration = 200`).
-- Vehicle leaves the road (`x > 24` or `y > 10`).
+- Vehicle leaves the road.
 
 ## Environment registration
 
